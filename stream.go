@@ -4,7 +4,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/deepch/vdk/format/rtsp"
+	"github.com/dbl0null/vdk/format/rtsp"
 )
 
 func serveStreams() {
@@ -12,6 +12,7 @@ func serveStreams() {
 		go func(name, url string) {
 			for {
 				log.Println(name, "connect", url)
+				//rtsp.DebugRtp = true
 				rtsp.DebugRtsp = true
 				session, err := rtsp.Dial(url)
 				if err != nil {

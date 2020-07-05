@@ -7,7 +7,7 @@ import (
 	"io/ioutil"
 	"log"
 
-	"github.com/deepch/vdk/av"
+	"github.com/dbl0null/vdk/av"
 )
 
 //Config global
@@ -19,12 +19,10 @@ type ConfigST struct {
 	Streams map[string]StreamST `json:"streams"`
 }
 
-//ServerST struct
 type ServerST struct {
 	HTTPPort string `json:"http_port"`
 }
 
-//StreamST struct
 type StreamST struct {
 	URL    string `json:"url"`
 	Status bool   `json:"status"`
